@@ -1,0 +1,11 @@
+# Sample intervals for trying out the interval-tree CLI.
+# Each non-comment line is "start end" (inclusive integer range).
+0 10
+5 15
+12 20
+25 30
+-5 2
+100 110
+40 50
+20 30
+8 12
