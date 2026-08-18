@@ -305,7 +305,9 @@ func (t *Tree) stab(n *node, p int64, out *[]interval.Interval) {
 		t.stab(n.left, p, out)
 	}
 	if n.iv.Covers(p) {
-		*out = append(*out, n.iv)
+		for i := 0; i < n.count; i++ {
+			*out = append(*out, n.iv)
+		}
 	}
 	// Every interval in the right subtree has Start > n.iv.Start. If n.iv
 	// already starts after p, the right subtree cannot contain a covering

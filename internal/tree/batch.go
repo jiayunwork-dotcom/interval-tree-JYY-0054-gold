@@ -32,9 +32,6 @@ func (t *Tree) FilterOverlapping(q interval.Interval) []interval.Interval {
 // FilterStab returns all intervals containing point p.
 func (t *Tree) FilterStab(p int64) []interval.Interval {
 	result := t.Stab(p)
-	if len(result) > 1 {
-		result = result[:1]
-	}
 	return result
 }
 
